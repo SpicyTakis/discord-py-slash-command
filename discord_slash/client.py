@@ -2,6 +2,7 @@ import logging
 import typing
 import discord
 from discord.ext import commands
+import voxelbotutils as utils
 from . import http
 from . import model
 from .utils import manage_commands
@@ -26,7 +27,7 @@ class SlashCommand:
                  client: typing.Union[discord.Client, commands.Bot],
                  auto_register: bool = False
                  ):
-        if isinstance(client, discord.Client) and not isinstance(client, commands.Bot):
+        if isinstance(client, discord.Client) and not isinstance(client, commands.Bot) or not isinstance(client, utils.Bot):
             raise Exception("Currently only commands.Bot is supported.")
         self._discord = client
         self.commands = {}
