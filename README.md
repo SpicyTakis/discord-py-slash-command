@@ -1,6 +1,9 @@
 # discord-py-slash-command
 Simple Discord Slash Command extension for [discord.py](https://github.com/Rapptz/discord.py).
 
+# Fork
+Added support for VBU's Bot instance
+
 ## Example
 ```py
 import discord
